@@ -1,0 +1,10 @@
+{% extends 'evos_app/layouts/base_evos_app.html' %}
+
+{% block title %} Панель управления {% endblock %}
+
+{% block content %}
+<div><a href=" {% url 'control_panel_categories' %} ">Категории</a></div>
+<div><a href="{% url 'control_panel_foods' %}">Блюда</a></div>
+<div><a href="{% url 'control_panel_users' %}">Пользователи</a></div>
+<div><a href="{% url 'logout_page' %}">Выход</a></div>
+{% endblock %}

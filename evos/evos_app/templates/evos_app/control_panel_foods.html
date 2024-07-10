@@ -1,0 +1,13 @@
+{% extends 'evos_app/layouts/base_evos_app.html' %}
+
+{% block title %} Блюда {% endblock %}
+
+{% block content %}
+    <a href="">Добавить</a>
+    {% for food in foods %}
+        <div>{{ food.name }}</div>
+        <a href="">Изменить</a>
+        <a href="">Удалить</a>
+    {% endfor %}
+<div><a href="{% url 'control_panel' %} ">Назад</a></div>
+{% endblock %}

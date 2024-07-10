@@ -1,0 +1,25 @@
+{% extends 'evos_app/layouts/base_evos_app.html' %}
+
+{% block title %}Меню{% endblock %}
+
+{% block content %}
+<a href="{% url 'profile' %}">Профиль</a>
+<a href="{% url 'basket' %}">Корзина</a>
+<div>
+    {% for category in categories %}
+        <a href="{% url 'menu_by_category' pk=category.id %}">{{ category.name }}</a>
+    {% endfor %}
+</div>
+
+<div>
+    {% for food in foods %}
+        <img src="{{ food.image.url }}" >
+        <h3>{{ food.name }}</h3>
+        <a href="">Добавить в корзину</a>
+<!--            <a href="add/basket/<int:id>">Добавить в корзину</a>-->
+    {% endfor %}
+</div>
+
+
+
+{% endblock %}

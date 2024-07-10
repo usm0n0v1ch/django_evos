@@ -1,0 +1,14 @@
+{% extends 'evos_app/layouts/base_evos_app.html' %}
+
+{% block title %} Категории {% endblock %}
+
+{% block content %}
+    <a href="">Добавить</a>
+    {% for category in categories %}
+        <div>{{ category.name }} </div>
+
+        <a href="">Изменить</a>
+        <a href="">Удалить</a>
+    {% endfor %}
+<div><a href="{% url 'control_panel' %} ">Назад</a></div>
+{% endblock %}

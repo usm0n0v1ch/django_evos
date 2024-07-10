@@ -1,0 +1,15 @@
+{% extends 'evos_app/layouts/base_evos_app.html' %}
+
+{% block title %} Пользователи {% endblock %}
+
+{% block content %}
+
+    <a href="">Добавить</a>
+    {% for user in users %}
+        <div>{{ user.username }} </div>
+        <a href="">Изменить</a>
+        <a href="">Удалить</a>
+    {% endfor %}
+
+<div><a href="{% url 'control_panel' %} ">Назад</a></div>
+{% endblock %}
